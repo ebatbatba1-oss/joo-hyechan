@@ -55,14 +55,6 @@ const modalData = {
       "달콤하고 나직한 중저음 보이스, 뛰어난 발성, 재치 있는 사연 피드백으로 심야 라디오 청취율 1위를 기록했다. 라디오를 통해 탄탄한 코어 팬덤을 구축했다."
   },
 
-  reality: {
-    category: "COMING SOON · REALITY SHOW",
-    title: "연애 리얼리티 프로그램",
-    role: "출연 예정",
-    description:
-      "배우로서 소비되는 이미지에서 벗어나, 자신의 삶과 진짜 감정을 마주하기 위해 출연을 결심했다. 가벼운 만남이 아닌 진짜 인연을 찾고 싶은 혜찬의 새로운 도전이다."
-  },
-
   fan: {
     category: "ALWAYS · FAN SERVICE",
     title: "팬들과 함께하는 시간",
