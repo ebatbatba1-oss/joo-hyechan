@@ -21,11 +21,11 @@
 </head>
 
 <body>
-  <!-- BGM Audio & Toggle Button (이곳에 bgm.mp3 오디오 파일이 들어갑니다) -->
-  <audio id="bgmAudio" loop>
+  <!-- BGM Audio & Toggle Button (페이지 진입 시 자동 재생) -->
+  <audio id="bgmAudio" loop autoplay>
     <source src="bgm.mp3" type="audio/mpeg">
   </audio>
-  <button id="bgmToggle" class="bgm-toggle">BGM OFF 🔇</button>
+  <button id="bgmToggle" class="bgm-toggle playing">BGM ⏸</button>
 
   <header class="site-header">
     <a href="#home" class="brand">
@@ -37,6 +37,7 @@
       <a href="#profile">PROFILE</a>
       <a href="#works">WORKS</a>
       <a href="#activities">ACTIVITIES</a>
+      <a href="#gallery">GALLERY</a>
       <a href="#quote">MESSAGE</a>
     </nav>
 
@@ -276,6 +277,28 @@
       </div>
     </section>
 
+    <!-- 사진첩 갤러리 섹션 -->
+    <section class="gallery-section section" id="gallery">
+      <div class="section-heading centered">
+        <p class="eyebrow">PHOTO GALLERY</p>
+        <h2>MOMENTS<br /><em>CAPTURED</em></h2>
+        <p class="section-description">
+          주혜찬의 다양한 일상과 비하인드 컷
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item"><img src="images/gallery-1.png" alt="갤러리 이미지 1" /></button>
+        <button class="gallery-item"><img src="images/gallery-2.png" alt="갤러리 이미지 2" /></button>
+        <button class="gallery-item"><img src="images/gallery-3.png" alt="갤러리 이미지 3" /></button>
+        <button class="gallery-item"><img src="images/gallery-4.png" alt="갤러리 이미지 4" /></button>
+        <button class="gallery-item"><img src="images/gallery-5.png" alt="갤러리 이미지 5" /></button>
+        <button class="gallery-item"><img src="images/gallery-6.png" alt="갤러리 이미지 6" /></button>
+        <button class="gallery-item"><img src="images/gallery-7.png" alt="갤러리 이미지 7" /></button>
+        <button class="gallery-item"><img src="images/gallery-8.png" alt="갤러리 이미지 8" /></button>
+      </div>
+    </section>
+
     <!-- 전체 활동 내역 (아코디언 토글 섹션) -->
     <section class="full-history-section section" id="full-history">
       <div class="section-heading centered">
@@ -349,6 +372,7 @@
     <p>© 2026 JOO HYECHAN. ALL RIGHTS RESERVED.</p>
   </footer>
 
+  <!-- 활동 이력 상세 모달 -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal">
       <button class="modal-close" aria-label="닫기">×</button>
@@ -356,10 +380,15 @@
       <h2 id="modalTitle">제목</h2>
       <p class="modal-role" id="modalRole"></p>
       <div class="modal-divider"></div>
-      <!-- 모달 이미지가 들어가는 위치 -->
       <img id="modalImage" class="modal-image" src="" alt="" style="display: none;" />
       <p id="modalDescription"></p>
     </div>
+  </div>
+
+  <!-- 사진첩 확대 모달 -->
+  <div class="gallery-modal-overlay" id="galleryModalOverlay">
+    <button class="gallery-modal-close" aria-label="닫기">×</button>
+    <img id="galleryModalImage" src="" alt="확대된 사진" />
   </div>
 
   <script src="script.js"></script>
