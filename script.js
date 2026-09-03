@@ -123,3 +123,37 @@ document.querySelectorAll(".main-nav a").forEach((link) => {
     mainNav.classList.remove("open");
   });
 });
+
+// === BGM Toggle Logic ===
+const bgmAudio = document.getElementById("bgmAudio");
+const bgmToggle = document.getElementById("bgmToggle");
+
+if (bgmAudio && bgmToggle) {
+  bgmToggle.addEventListener("click", () => {
+    if (bgmAudio.paused) {
+      bgmAudio.play();
+      bgmToggle.textContent = "BGM ON 🎵";
+      bgmToggle.classList.add("playing");
+    } else {
+      bgmAudio.pause();
+      bgmToggle.textContent = "BGM OFF 🔇";
+      bgmToggle.classList.remove("playing");
+    }
+  });
+}
+
+// === Full History Toggle Logic ===
+const historyToggle = document.getElementById("historyToggle");
+const historyContent = document.getElementById("historyContent");
+
+if (historyToggle && historyContent) {
+  historyToggle.addEventListener("click", () => {
+    if (historyContent.style.display === "none") {
+      historyContent.style.display = "block";
+      historyToggle.innerHTML = "내역 접기 <span>↑</span>";
+    } else {
+      historyContent.style.display = "none";
+      historyToggle.innerHTML = "전체 방송 및 작품 내역 보기 <span>↓</span>";
+    }
+  });
+}
