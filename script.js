@@ -5,6 +5,7 @@ const modalCategory = document.getElementById("modalCategory");
 const modalTitle = document.getElementById("modalTitle");
 const modalRole = document.getElementById("modalRole");
 const modalDescription = document.getElementById("modalDescription");
+const modalImage = document.getElementById("modalImage");
 
 const modalData = {
   "night-side": {
@@ -51,6 +52,7 @@ const modalData = {
     category: "2020 — 2021 · SBS POWER FM",
     title: "주혜찬의 밤의 세레나데",
     role: "고정 DJ",
+    image: "images/radio.png",
     description:
       "달콤하고 나직한 중저음 보이스, 뛰어난 발성, 재치 있는 사연 피드백으로 심야 라디오 청취율 1위를 기록했다. 라디오를 통해 탄탄한 코어 팬덤을 구축했다."
   },
@@ -73,6 +75,15 @@ function openModal(key) {
   modalTitle.textContent = data.title;
   modalRole.textContent = data.role;
   modalDescription.textContent = data.description;
+  
+  if (data.image) {
+    modalImage.src = data.image;
+    modalImage.alt = data.title + " 이미지";
+    modalImage.style.display = "block";
+  } else {
+    modalImage.style.display = "none";
+    modalImage.src = "";
+  }
 
   modalOverlay.classList.add("active");
   document.body.style.overflow = "hidden";
