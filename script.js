@@ -108,9 +108,43 @@ modalOverlay.addEventListener("click", (event) => {
   }
 });
 
+// === Gallery Modal Logic ===
+const galleryModalOverlay = document.getElementById("galleryModalOverlay");
+const galleryModalClose = document.querySelector(".gallery-modal-close");
+const galleryModalImage = document.getElementById("galleryModalImage");
+
+document.querySelectorAll(".gallery-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const imgSrc = item.querySelector("img").src;
+    galleryModalImage.src = imgSrc;
+    galleryModalOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+function closeGalleryModal() {
+  if (galleryModalOverlay) {
+    galleryModalOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+}
+
+if (galleryModalClose) {
+  galleryModalClose.addEventListener("click", closeGalleryModal);
+}
+
+if (galleryModalOverlay) {
+  galleryModalOverlay.addEventListener("click", (event) => {
+    if (event.target === galleryModalOverlay) {
+      closeGalleryModal();
+    }
+  });
+}
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeModal();
+    closeGalleryModal();
   }
 });
 
@@ -135,11 +169,11 @@ if (bgmAudio && bgmToggle) {
   bgmToggle.addEventListener("click", () => {
     if (bgmAudio.paused) {
       bgmAudio.play();
-      bgmToggle.textContent = "BGM ON 🎵";
+      bgmToggle.textContent = "BGM ⏸";
       bgmToggle.classList.add("playing");
     } else {
       bgmAudio.pause();
-      bgmToggle.textContent = "BGM OFF 🔇";
+      bgmToggle.textContent = "BGM ▶";
       bgmToggle.classList.remove("playing");
     }
   });
