@@ -21,6 +21,11 @@
 </head>
 
 <body>
+  <audio id="bgmAudio" loop>
+    <source src="bgm.mp3" type="audio/mpeg">
+  </audio>
+  <button id="bgmToggle" class="bgm-toggle">BGM OFF 🔇</button>
+
   <header class="site-header">
     <a href="#home" class="brand">
       <span class="brand-mark">JH</span>
@@ -268,6 +273,59 @@
           </span>
           <span class="activity-arrow">↗</span>
         </button>
+      </div>
+    </section>
+
+    <section class="full-history-section section" id="full-history">
+      <div class="section-heading centered">
+        <p class="eyebrow">FULL ARCHIVE</p>
+        <h2>ALL<br /><em>HISTORY</em></h2>
+        <p class="section-description" style="margin-bottom: 40px;">
+          주혜찬의 전체 필모그래피와 방송 활동 내역을 확인해 보세요.
+        </p>
+        <button id="historyToggle" class="line-button center-button">전체 방송 및 작품 내역 보기 <span>↓</span></button>
+      </div>
+
+      <div id="historyContent" class="history-content" style="display: none;">
+        <div class="history-group">
+          <h3>필모그래피</h3>
+          <ul>
+            <li><strong>2015년 영화 《블랙아웃》 (데뷔작):</strong> 이름 없는 웨이터 단역. 화면에 잡히는 분량은 몇 초에 불과했으나 연기 인생의 첫걸음을 뗐다.</li>
+            <li><strong>2015년 드라마 《도시의 밤》:</strong> 클럽 직원 단역 (4화 특별 출연).</li>
+            <li><strong>2016년 드라마 《청춘의 덫》:</strong> 주인공 친구 무리 중 한 명인 조연 '박민수' 역. 밝고 쾌활한 성격으로 감초 역할을 톡톡히 해내며 대중에게 얼굴을 조금씩 알리기 시작했다.</li>
+            <li><strong>2016년 영화 《흔적》:</strong> 사건 현장 목격자 행인 역 (단역).</li>
+            <li><strong>2017년 영화 《심야의 살인마》:</strong> 피해자의 남동생 역 (단역/조연). 짧지만 강렬한 오열 씬과 감정 연기를 선보여 업계 관계자들에게 깊은 눈도장을 찍었다.</li>
+            <li><strong>2017년 드라마 《로맨스 라디오》:</strong> 주인공의 직장 후배 '윤도현' 역 (조연). 능청스럽고 귀여운 후배 역할을 소화했다.</li>
+            <li><strong>2018년 드라마 《형사수첩》:</strong> 마약 유통망의 말단 딜러 '신우' 역 (조연). 위태롭고 반항적인 청년 이미지를 섬세하게 그려냈다.</li>
+            <li><strong>2018년 영화 《더 게스트》:</strong> 별장 파티에 초대받은 손님 '재혁' 역 (조연).</li>
+            <li><strong>2019년 드라마 《밤의 이면》 - 서브 빌런 '강태서' 역 (대표작):</strong> 혜찬의 브레이크아웃 작품. 속을 알 수 없는 능글맞은 싸이코패스 연기로 단숨에 대중의 눈도장을 찍으며 라이징 스타 반열에 올랐다. 선과 악이 공존하는 마스크가 빛을 발한 작품이다.</li>
+            <li><strong>2019년 영화 《새벽 두 시의 탈출》:</strong> 탈주범 역할로 특별 출연 (카메오).</li>
+            <li><strong>2020년 드라마 《하얀 거짓말》:</strong> 주인공의 뻔뻔하고 유들유들한 사촌동생 '서진우' 역 (조연). 밉지 않은 악동 매력을 뽐냈다.</li>
+            <li><strong>2020년 영화 《사선에서》:</strong> 용병단 조직원 '케이' 역 (조연). 첫 총기 액션 연기를 능숙하게 소화했다.</li>
+            <li><strong>2021년 드라마 《연애의 온도 차이》:</strong> 로맨틱 코미디의 서브 남주인공 '차은우' 역. 다정하면서도 은근히 능글맞은 매력으로 시청자들의 마음을 흔들며 '서브병 유발자'라는 호칭을 얻었다. 이때 처음 선보인 파격적인 핑크색 염색 스타일링이 큰 화제가 되었다.</li>
+            <li><strong>2021년 영화 《침묵의 대가》:</strong> 비리 정치가의 수행 비서 역 (조연).</li>
+            <li><strong>2022년 영화 《블루 문》:</strong> 느와르 장르에서 조직에 잠입한 언더커버 경찰 '최도일' 역. 날카로운 눈빛과 화려한 액션 연기를 완벽하게 소화해내며 연기 스펙트럼을 넓혔다. 배역을 위해 체중을 감량하고 피부를 까맣게 태우기도 했다.</li>
+            <li><strong>2022년 드라마 《코드 네임: 세븐》:</strong> 천재 해커 '제이' 역 (조연). 지적이면서도 시니컬한 면모를 보였다.</li>
+            <li><strong>2023년 드라마 《그림자 정원》:</strong> 자유분방하고 퇴폐적인 화가 '오시온' 역 (조연). 치명적인 매력으로 온라인상에서 수많은 클립을 생성했다.</li>
+            <li><strong>2023년 영화 《밀항선》:</strong> 밀항 조직의 중간책 '진호' 역 (조연). 거친 이미지 변신을 위해 5kg 증량 후 출연했다.</li>
+            <li><strong>2024년 영화 《적색경보》 - 조연 '이해일' 역:</strong> 주인공을 돕는 유쾌하면서도 미스터리한 정보원 역할로 탄탄한 감초 연기를 선보였다.</li>
+            <li><strong>2024년 드라마 《체크메이트》:</strong> 차가운 엘리트 검사 '성민재' 역 (조연).</li>
+            <li><strong>2025년 영화 《라스트 씬》:</strong> 까칠하지만 영화에 진심인 조연출 '기태' 역 (조연).</li>
+            <li><strong>2025년 드라마 《새벽의 경계》:</strong> 비밀을 간직한 바텐더 '하진' 역 (조연).</li>
+          </ul>
+        </div>
+        
+        <div class="history-group">
+          <h3>방송 및 기타 활동 이력</h3>
+          <ul>
+            <li><strong>2020년 ~ 2021년:</strong> SBS 파워FM 《주혜찬의 밤의 세레나데》 고정 DJ. 특유의 달콤하고 나직한 중저음 보이스와 뛰어난 발성, 능글맞고 재치 있는 사연 피드백으로 심야 라디오 청취율 1위를 기록하며 탄탄한 코어 팬덤을 구축했다.</li>
+            <li><strong>2021년:</strong> tvN 《놀라운 토요일》 게스트 출연 (드라마 《연애의 온도 차이》 홍보차). 타고난 유머 감각과 능청스러운 리액션으로 예능감을 입증했다.</li>
+            <li><strong>2022년:</strong> 웹예능 《차린건 쥐뿔도 없지만》 게스트 출연. 거침없는 입담과 여유로운 태도로 화제를 모으며 500만 뷰 이상의 높은 조회수를 기록했다.</li>
+            <li><strong>2023년:</strong> MBC 《전지적 참견 시점》 참견인 출연. 배역에 맞춘 철저한 자기관리 루틴과 팬들의 요구를 흔쾌히 들어주는 특급 팬서비스 일상이 공개되어 큰 호감을 샀다.</li>
+            <li><strong>2024년:</strong> KBS Cool FM 연말 특집 스페셜 DJ. 오랜만에 라디오 부스에 복귀해 청취자들의 뜨거운 반응을 이끌어냈다.</li>
+            <li><strong>2026년:</strong> 연애 리얼리티 프로그램 출연. 배우 본업에 집중하다가 새로운 자극과 진솔한 만남을 위해 출연을 결정했다.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
