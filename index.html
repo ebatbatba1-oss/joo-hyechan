@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <!-- BGM Audio & Toggle Button -->
+  <!-- BGM Audio & Toggle Button (이곳에 bgm.mp3 오디오 파일이 들어갑니다) -->
   <audio id="bgmAudio" loop>
     <source src="bgm.mp3" type="audio/mpeg">
   </audio>
@@ -256,10 +256,8 @@
       </div>
 
       <div class="activity-list">
-        <button class="activity-item has-image" data-modal="radio">
-          <div class="activity-thumb">
-            <img src="images/radio.png" alt="라디오 썸네일" />
-          </div>
+        <button class="activity-item" data-modal="radio">
+          <span class="activity-number">01</span>
           <span class="activity-title">
             <small>2020 — 2021 · SBS POWER FM</small>
             <strong>주혜찬의 밤의 세레나데</strong>
@@ -358,6 +356,8 @@
       <h2 id="modalTitle">제목</h2>
       <p class="modal-role" id="modalRole"></p>
       <div class="modal-divider"></div>
+      <!-- 모달 이미지가 들어가는 위치 -->
+      <img id="modalImage" class="modal-image" src="" alt="" style="display: none;" />
       <p id="modalDescription"></p>
     </div>
   </div>
