@@ -586,6 +586,95 @@ img {
   line-height: 2;
 }
 
+/* === 추가된 CSS: BGM 버튼 & 히스토리 아코디언 === */
+.bgm-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--red);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  z-index: 50;
+  box-shadow: 0 4px 12px rgba(181, 31, 62, 0.3);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.bgm-toggle:hover {
+  background: var(--hot-pink);
+  transform: translateY(-2px);
+}
+
+.bgm-toggle.playing {
+  background: var(--deep-black);
+}
+
+.full-history-section {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+
+.center-button {
+  display: flex;
+  margin: 0 auto;
+}
+
+.history-content {
+  margin-top: 50px;
+  border-top: 1px solid var(--black);
+  padding-top: 50px;
+  animation: fadeInDown 0.5s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.history-group {
+  margin-bottom: 50px;
+}
+
+.history-group h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  color: var(--red);
+  margin-bottom: 25px;
+}
+
+.history-group ul {
+  list-style: none;
+}
+
+.history-group li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--gray);
+  margin-bottom: 18px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.history-group li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  top: 2px;
+}
+
+.history-group li strong {
+  color: var(--black);
+  display: inline-block;
+  margin-right: 5px;
+}
+
 /* 태블릿 */
 @media (max-width: 800px) {
   .main-nav {
@@ -734,5 +823,11 @@ img {
 
   .modal {
     padding: 42px 28px;
+  }
+  
+  .bgm-toggle {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
   }
 }
