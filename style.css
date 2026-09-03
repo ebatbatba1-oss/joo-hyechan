@@ -284,6 +284,46 @@ img {
   max-width: 610px;
 }
 
+.profile-details {
+  margin-top: 40px;
+}
+
+.profile-details h3 {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--red);
+  margin: 30px 0 15px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.profile-details p {
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+.profile-details .keyword-list {
+  list-style: none;
+}
+
+.profile-details .keyword-list li {
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.profile-details .keyword-list strong {
+  display: block;
+  color: var(--red);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
 .keywords-section {
   background: var(--red);
   color: white;
@@ -918,3 +958,4 @@ img {
     padding: 10px 16px;
   }
 }
+
